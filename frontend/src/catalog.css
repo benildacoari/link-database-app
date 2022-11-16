@@ -1,0 +1,28 @@
+.catalogue{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.listaCateg{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.categ{
+  flex: 1 1;
+  background-color: rgb(123, 214, 214);
+  max-width: 300px;
+  min-width: 250px;
+  height: 180px;
+}
+
+.card-link{
+  flex: 1 1;
+  background-color: rgb(170, 123, 214);
+  max-width: 300px;
+  min-width: 250px;
+  height: 180px;
+}
+

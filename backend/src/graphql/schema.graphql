@@ -1,0 +1,37 @@
+type Category {
+    _id: ID!
+    title: String!
+}
+
+type Link {
+    _id: ID!
+    title: String
+    description: String
+    link: String!
+    category: Category 
+}
+
+input LinkInput {
+    title: String
+    description: String
+    link: String!
+    category: ID
+}
+
+input CategoryInput{
+    title: String
+}
+
+type Query {
+    links: [Link]
+    categorys: [Category]
+}
+
+type Mutation {
+    createLink(link: LinkInput!): Link
+    deleteLink(linkId: ID!): Link
+    updateLink(linkId: ID!, link: LinkInput!): Link
+    createCategory(category: CategoryInput!): Category
+    deleteCategory(categoryId: ID!): Category
+    updateCategory(categoryId: ID!, title: String!): Category
+}
