@@ -44,32 +44,38 @@ function Catalog() {
         "link": dataForm.get("link"),
         "category": dataForm.get("categoryid")
       } } })
-      
+      location.reload();
     }
 
     return (
-        <div className="catalogue">
-            <form onSubmit={createLinkAction}>
-              <p>Title Link:</p>
-              <input name="title" />
-              <p>Description:</p>
-              <input name="description" />
-              <p>Link:</p>
-              <input name="link" />
-              <br/><br/>
-              <select name="categoryid">
-                {
-                  (data ?? {}).categorys?.map(({ _id, title}) => (
-                      <option key={_id} value={_id}>
-                        {title}
-                      </option>
-                  ))
-                } 
-              </select>
-              <input type="submit" value="Create"/>
+        <div >
+            <form onSubmit={createLinkAction} className="form-link">
+              <div className="form-input">
+                <label>Title Link:</label><br/>
+                <input name="title" /> 
+              </div>
+              <div className="form-input">
+                <label>Link:</label><br/>
+                <input name="link" />
+              </div>
+              <div className="form-input">
+                <label>Category:</label>
+                <select name="categoryid">
+                  {
+                    (data ?? {}).categorys?.map(({ _id, title}) => (
+                        <option key={_id} value={_id}>
+                          {title}
+                        </option>
+                    ))
+                  } 
+                </select>
+              </div>
+              <div className="form-input">
+                <input type="submit" value="Create" />
+              </div>
             </form>
         </div>
     )
 }
 
-export default Catalog
+export default Catalog;

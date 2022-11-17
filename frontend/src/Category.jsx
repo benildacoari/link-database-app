@@ -44,11 +44,11 @@ function Tolist() {
                       <h3>{title}</h3>
                       {
                         (datal ?? {}).links?.map(({ _id: idlink, title: titlelink, link, category}) => (
-                            <div>
+                            <div key={idlink + ' - ' + _id}>
                                 {category?._id === _id && (
-                                    <div key={idlink} >
-                                        <h3>{titlelink}</h3>
-                                        <a href={link} target="_blank">{link}</a>
+                                    <div className="enlace">
+                                        <p>{titlelink}</p>
+                                        <a href={link} target="_blank" >{link}</a>
                                     </div>
                                 )}
                             </div>
@@ -60,11 +60,11 @@ function Tolist() {
             <div className="categ">
                 {
                 (datal ?? {}).links?.map(({ _id: idlink, title: titlelink, link, category}) => (
-                    <div>
+                    <div key={idlink + 'no-category'}>
                         {!Boolean(category) && (
-                            <div key={idlink} >
-                                <h3>{titlelink}</h3>
-                                <a href={link} target="_blank">{link}</a>
+                            <div className="enlace">
+                                <p>{titlelink}</p>
+                                <a href={link} target="_blank" >{link}</a>
                             </div>
                         )}
                     </div>

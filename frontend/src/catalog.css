@@ -1,3 +1,7 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .catalogue{
   display: flex;
   gap: 10px;
@@ -15,7 +19,7 @@
   background-color: rgb(123, 214, 214);
   max-width: 300px;
   min-width: 250px;
-  height: 180px;
+  padding: 5px;
 }
 
 .card-link{
@@ -26,3 +30,55 @@
   height: 180px;
 }
 
+.encabezado{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(61, 53, 95);
+  padding: 10px;
+}
+
+img{
+  width: 300px;
+}
+
+h1{
+  flex:1 1;
+  color: white;
+}
+
+.form-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(36, 31, 60);
+  width: 320px;
+  border-radius: 5px;
+}
+
+.form-input{
+  margin: 5px;
+  padding: 0;
+  
+}
+
+label{
+  color: rgb(214, 204, 240);
+  margin: 5px;
+}
+
+input{
+  border-radius: 5px;
+  width: 290px;
+  margin: 5px;
+  padding: 0 0 0 5px;
+}
+
+.enlace{
+  /* width: 100px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: rgb(155, 155, 186);
+  margin-bottom: 5px;
+  padding: 5px;
+}

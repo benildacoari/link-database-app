@@ -6,11 +6,12 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Category from './Category.jsx';
 import FormCategory from './FormCategory.jsx';
+import Container from './Container.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Category />,
+    element: <Container />,
   },
   {
     path: "/links",

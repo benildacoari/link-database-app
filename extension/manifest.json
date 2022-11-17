@@ -1,0 +1,14 @@
+{
+    "name": "My Link",
+    "version": "1.0.0",
+    "description": "Extension para guardar URLs",
+    "manifest_version": 3,
+    "author": "BenildaCoari",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "mylink"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
